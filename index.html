@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Ahay Uhuy Cihuy</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" type="text/css" href="style.css" /> 
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css" /> 
+    <link rel="stylesheet" type="text/js" href="bootstrap/js/bootstrap.min.js" /> 
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Poppins&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <header>
+        <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+        <div class="overlay"></div>
+      
+        <!-- The HTML5 video element that will create the background video on the header -->
+        <video playsinline autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+          <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+        </video>
+      
+        <!-- The header content -->
+        <div class="container h-100">
+            <div class="row h-100 ms-1 me-1 justify-content-center align-content-center text-center">
+              <div class="col-12">
+                <div class="row">
+                  <div class="h1 text-white">
+                    <p>Halo Gan!</p>
+                  </div>
+                </div>
+                <div class="row justify-content-center mb-5 ms-1 me-1">
+                  <div class="col-12 col-md-6">
+                    <div class="text-white poppins">
+                      <p>Assalamualaikum Warahmatullahiwabarakatuh!</p>
+                      <p>Jamaah... oh Jamaah... Alhamdulillah...</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center mt-2 mb-2 ms-1 me-1">
+                  <div class="col-12 col-md-6">
+                    <div class="row poppins">
+                      <button type="button" onclick="window.location.href='https://wa.me/6282133065424?text=Jancok%21';" class="btn btn-warning ps-1 pe-1 pt-3 pb-3 rounded-4">Ahay</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center mt-2 mb-2 ms-1 me-1">
+                  <div class="col-12 col-md-6">
+                    <div class="row poppins">
+                      <button type="button" onclick="window.location.href='https://wa.me/6282133065424?text=Hai%20Ganteng%21';" class="btn btn-outline-light ps-1 pe-1 pt-3 pb-3 rounded-4">Uhuy</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="row justify-content-center mt-2 mb-2 ms-1 me-1">
+                  <div class="col-12 col-md-6">
+                    <div class="row poppins">
+                      <button type="button" onclick="window.location.href='https://wa.me/6282133065424?text=Asu%21';" class="btn btn-primary ps-1 pe-1 pt-3 pb-3 rounded-4">Cihuy</button>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </div>
+      </header>
+      
+      <!-- Page section example for content below the video header -->
+      <!-- <section class="my-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 mx-auto">
+              <p class="mb-0">
+                Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section> -->
+  </body>
+  
+</html>
+
+<script>
+  document.querySelector('button').addEventListener('click', () => {
+      document.querySelector('video').play();
+  });
+</script>
