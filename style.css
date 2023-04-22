@@ -1,3 +1,38 @@
+@font-face {
+  font-family: aileron;
+  src: url(fonts/Aileron-Regular.otf);
+}
+
+@font-face {
+  font-family: aileron_bold;
+  src: url(fonts/Aileron-Bold.otf);
+}
+
+@font-face {
+  font-family: aileron_semibold;
+  src: url(fonts/Aileron-SemiBold.otf);
+}
+
+@font-face {
+  font-family: newyork;
+  src: url(fonts/newyork/NewYork\ PERSONAL\ USE.otf);
+}
+
+@font-face {
+  font-family: yeseva_one;
+  src: url(fonts/yeseva_one/YesevaOne-Regular.ttf);
+}
+
+@font-face {
+  font-family: cormorant_garamond;
+  src: url(fonts/cormorant_garamond/CormorantGaramond-Regular.ttf);
+}
+
+@font-face {
+  font-family: cormorant_garamond_bold;
+  src: url(fonts/cormorant_garamond/CormorantGaramond-Bold.ttf);
+}
+
 header {
     position: relative;
     background-color: black;
@@ -39,12 +74,63 @@ header {
   }
   
   .h1 {
-    font-family: 'Merriweather', serif;
+    font-family: yeseva_one;
     color: white;
   }
 
-  .poppins {
-    font-family: 'Poppins', sans-serif;
+  .aileron {
+    font-family: aileron;
+  }
+
+  .aileron-bold {
+    font-family: aileron_bold;
+  }
+
+  .aileron-semibold {
+    font-family: aileron_semibold;
+  }
+
+  .yeseva_one {
+    font-family: yeseva_one;
+  }
+
+  .newyork {
+    font-family: newyork;
+  }
+
+  .cormorant_garamond {
+    font-family: cormorant_garamond;
+  }
+
+  .cormorant_garamond_bold {
+    font-family: cormorant_garamond_bold;
+  }
+
+  .title p {
+    margin-bottom: 0;
+  }
+
+  .paragraph p {
+    text-align: left;
+  }
+
+  .paragraph .cormorant_garamond {
+    font-size: medium;
+  }
+
+  .btn-green button {
+    background-color: #25D366;
+    font-size: large;
+  }
+
+  .btn-green button:hover {
+    background-color: #25D366;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  .subheader h3 {
+    font-size: medium;
+    color: white;
   }
 
   /* Media Query for devices withi coarse pointers and no hover functionality */
