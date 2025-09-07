@@ -117,6 +117,13 @@ main .container {
     z-index: 10;
 }
 
+.bottom-right-section {
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
+    z-index: 10;
+}
+
 .center-section {
     z-index: 10;
     max-width: 800px;
@@ -178,6 +185,11 @@ main .container {
     .bottom-left-section {
         bottom: 2%;
         left: 3%;
+    }
+
+    .bottom-right-section {
+        bottom: 2%;
+        right: 3%;
     }
 
     .center-section {
@@ -278,6 +290,11 @@ main .container {
     .bottom-left-section {
         bottom: 3%;
         left: 4%;
+    }
+
+    .bottom-right-section {
+        bottom: 3%;
+        right: 4%;
     }
 
     .center-section {
