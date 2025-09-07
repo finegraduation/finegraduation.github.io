@@ -102,6 +102,28 @@ main .container {
     }
 }
 
+/* New Layout Positioning */
+.top-left-section {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    z-index: 10;
+}
+
+.bottom-left-section {
+    position: absolute;
+    bottom: 5%;
+    left: 5%;
+    z-index: 10;
+}
+
+.center-section {
+    z-index: 10;
+    max-width: 800px;
+    width: 100%;
+    padding: 0 2rem;
+}
+
 /* WhatsApp Button Enhancements */
 .whatsapp-btn {
     background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
@@ -148,12 +170,27 @@ main .container {
 
 /* Mobile Styles (up to 767px) */
 @media (max-width: 767px) {
+    .top-left-section {
+        top: 2%;
+        left: 3%;
+    }
+
+    .bottom-left-section {
+        bottom: 2%;
+        left: 3%;
+    }
+
+    .center-section {
+        padding: 0 1rem;
+        max-width: 90%;
+    }
+
     .container {
         padding-left: 1rem;
         padding-right: 1rem;
         padding-bottom: 2rem; /* Reduced bottom padding */
     }
-    
+
     main {
         padding-bottom: 2rem; /* Reduced padding for main content */
         min-height: 100vh; /* Ensure full height */
@@ -233,12 +270,27 @@ main .container {
 
 /* Tablet Styles (768px to 1023px) */
 @media (min-width: 768px) and (max-width: 1023px) {
+    .top-left-section {
+        top: 3%;
+        left: 4%;
+    }
+
+    .bottom-left-section {
+        bottom: 3%;
+        left: 4%;
+    }
+
+    .center-section {
+        padding: 0 1.5rem;
+        max-width: 700px;
+    }
+
     .container {
         padding-left: 2rem;
         padding-right: 2rem;
         padding-bottom: 3rem;
     }
-    
+
     main {
         padding-bottom: 3rem;
     }
