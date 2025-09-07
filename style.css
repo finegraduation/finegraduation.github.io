@@ -1,0 +1,379 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Video Background Styles */
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    overflow: hidden;
+    /* Fallback gradient background */
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0.8) 0%,
+        rgba(0, 0, 0, 0.6) 50%,
+        rgba(0, 0, 0, 0.8) 100%
+    );
+    z-index: -1;
+}
+
+/* Additional text shadow for better readability */
+main .container {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Typography Enhancements */
+.font-playfair {
+    font-family: 'Playfair Display', serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+.font-montserrat {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Animation Classes */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+.fade-in-up.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.fade-in-up.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.fade-in-up.delay-600 {
+    animation-delay: 0.6s;
+}
+
+.fade-in-up.delay-800 {
+    animation-delay: 0.8s;
+}
+
+.fade-in-up.delay-1000 {
+    animation-delay: 1s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* WhatsApp Button Enhancements */
+.whatsapp-btn {
+    background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.3);
+    border: none;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.whatsapp-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.whatsapp-btn:hover::before {
+    left: 100%;
+}
+
+.whatsapp-btn:hover {
+    background: linear-gradient(135deg, #128C7E 0%, #25D366 100%);
+    box-shadow: 0 15px 40px rgba(37, 211, 102, 0.4);
+    transform: translateY(-2px) scale(1.05);
+}
+
+.whatsapp-btn:active {
+    transform: translateY(0) scale(1.02);
+}
+
+/* Scroll Indicator - Hidden for all views */
+.scroll-indicator {
+    display: none;
+}
+
+/* Scroll line styles removed since scroll indicator is hidden */
+
+/* Responsive Design */
+
+/* Mobile Styles (up to 767px) */
+@media (max-width: 767px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 2rem; /* Reduced bottom padding */
+    }
+    
+    main {
+        padding-bottom: 2rem; /* Reduced padding for main content */
+        min-height: 100vh; /* Ensure full height */
+        display: flex;
+        align-items: center;
+    }
+    
+    .font-playfair {
+        font-size: 2.2rem; /* Slightly smaller for better fit */
+        line-height: 1.1;
+        margin-bottom: 1.2rem;
+    }
+    
+    .video-bg {
+        /* Ensure video covers properly on mobile */
+        min-width: 100%;
+        min-height: 100%;
+    }
+    
+    /* Adjust spacing for mobile - more compact */
+    .fade-in-up {
+        margin-bottom: 0.8rem;
+    }
+    
+    /* Location text spacing */
+    .fade-in-up.delay-200 .font-montserrat {
+        margin-bottom: 1.2rem;
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+    
+    /* Quote section spacing */
+    .fade-in-up.delay-400 {
+        margin-bottom: 1.2rem;
+    }
+    
+    .fade-in-up.delay-400 p {
+        font-size: 0.85rem;
+        margin-bottom: 0.8rem;
+        line-height: 1.5;
+    }
+    
+    /* Description spacing */
+    .fade-in-up.delay-600 {
+        margin-bottom: 1.2rem;
+    }
+    
+    .fade-in-up.delay-600 p {
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+    
+    /* Hashtags spacing */
+    .fade-in-up.delay-800 {
+        margin-bottom: 1.5rem;
+    }
+    
+    .fade-in-up.delay-800 p {
+        font-size: 0.75rem;
+    }
+    
+    /* CTA section */
+    .fade-in-up.delay-1000 h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 0.8rem 1.4rem;
+        font-size: 0.85rem;
+        width: 100%;
+        max-width: 240px;
+        margin-bottom: 0; /* Remove bottom margin */
+    }
+    
+}
+
+/* Tablet Styles (768px to 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+        padding-bottom: 3rem;
+    }
+    
+    main {
+        padding-bottom: 3rem;
+    }
+    
+    .font-playfair {
+        font-size: 3.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .fade-in-up.delay-1000 h2 {
+        font-size: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .whatsapp-btn {
+        padding: 1.1rem 2.2rem;
+        font-size: 1rem;
+        max-width: 300px;
+    }
+}
+
+/* Desktop Styles (1024px and up) */
+@media (min-width: 1024px) {
+    .container {
+        max-width: 1200px;
+    }
+    
+    .whatsapp-btn {
+        padding: 1.5rem 3rem;
+        font-size: 1.25rem;
+    }
+}
+
+/* Large Desktop Styles (1440px and up) */
+@media (min-width: 1440px) {
+    .font-playfair {
+        font-size: 5rem;
+    }
+    
+    .container {
+        max-width: 1400px;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .video-bg {
+        /* Optimize video quality for retina displays */
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: reduce) {
+    .fade-in-up,
+    .whatsapp-btn {
+        animation: none;
+        transition: none;
+    }
+    
+    .fade-in-up {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+/* Focus States for Accessibility */
+.whatsapp-btn:focus {
+    outline: 3px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Print Styles */
+@media print {
+    .video-container,
+    .scroll-indicator {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .whatsapp-btn {
+        background: #25D366;
+        color: white;
+        text-decoration: none;
+    }
+}
+
+/* Loading State */
+.video-bg[data-loading="true"] {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.video-bg[data-loading="false"] {
+    opacity: 1;
+}
+
+/* Fallback Image Styles */
+.fallback-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Fallback for browsers that don't support video */
+.no-video .video-container {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
