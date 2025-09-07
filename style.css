@@ -110,6 +110,13 @@ main .container {
     z-index: 10;
 }
 
+.top-right-section {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 10;
+}
+
 .bottom-left-section {
     position: absolute;
     bottom: 5%;
@@ -180,6 +187,11 @@ main .container {
     .top-left-section {
         top: 2%;
         left: 3%;
+    }
+
+    .top-right-section {
+        top: 2%;
+        right: 3%;
     }
 
     .bottom-left-section {
@@ -285,6 +297,11 @@ main .container {
     .top-left-section {
         top: 3%;
         left: 4%;
+    }
+
+    .top-right-section {
+        top: 3%;
+        right: 4%;
     }
 
     .bottom-left-section {
